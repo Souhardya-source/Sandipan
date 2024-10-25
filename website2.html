@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Navigation Personal Website</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #000; /* Set text color to black */
+            overflow-x: hidden;
+        }
+        header {
+            background: #222;
+            text-align: center;
+            padding: 20px;
+            font-size: 2em;
+            color: #fff;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 10px;
+            perspective: 1000px;
+        }
+        nav ul li a {
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            background: #444;
+            transition: transform 0.3s ease, background 0.3s ease;
+            display: block;
+            border-radius: 10px;
+            transform-style: preserve-3d;
+        }
+        nav ul li a:hover {
+            transform: rotateX(15deg) rotateY(15deg) translateZ(10px);
+            background: #555;
+        }
+        .container {
+            padding: 30px;
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            background-repeat: no-repeat;
+            transition: background 0.5s ease;
+        }
+        .section-title {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0,0,0,0.7);
+            border-radius: 10px;
+            font-size: 1.8em;
+            color: #fff;
+        }
+        .bg-home { background-image: url('home-background.jpg'); }
+        .bg-about { background-image: url('about-background.jpg'); }
+        .bg-education { background-image: url('education-background.jpg'); }
+        .bg-experience { background-image: url('experience-background.jpg'); }
+        .bg-publications { background-image: url('publications-background.jpg'); }
+        .bg-awards { background-image: url('awards-background.jpg'); }
+        .bg-projects { background-image: url('projects-background.jpg'); }
+        .bg-membership { background-image: url('membership-background.jpg'); }
+        .bg-research { background-image: url('research-background.jpg'); }
+        .bg-events { background-image: url('events-background.jpg'); }
+        .bg-presentations { background-image: url('presentations-background.jpg'); }
+        .bg-courses { background-image: url('courses-background.jpg'); }
+        .bg-contact { background-image: url('contact-background.jpg'); }
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="changeSection('home')">Home</a></li>
+            <li><a href="#about" onclick="changeSection('about')">About Me</a></li>
+            <li><a href="#education" onclick="changeSection('education')">Educational Background</a></li>
+            <li><a href="#experience" onclick="changeSection('experience')">Experience</a></li>
+            <li><a href="#publications" onclick="changeSection('publications')">Publications</a></li>
+            <li><a href="#awards" onclick="changeSection('awards')">Awards & Achievements</a></li>
+            <li><a href="#projects" onclick="changeSection('projects')">Projects</a></li>
+            <li><a href="#membership" onclick="changeSection('membership')">Membership</a></li>
+            <li><a href="#research" onclick="changeSection('research')">Research Thrust Area</a></li>
+            <li><a href="#events" onclick="changeSection('events')">Events</a></li>
+            <li><a href="#presentations" onclick="changeSection('presentations')">Presentations</a></li>
+            <li><a href="#courses" onclick="changeSection('courses')">Courses Completed</a></li>
+            <li><a href="#contact" onclick="changeSection('contact')">Contact Me</a></li>
+        </ul>
+    </nav>
+    <div class="container bg-home" id="section-container">
+        <div id="home" class="content">
+            <div class="section-title">Home</div>
+            <p>Welcome to my personal website. Explore to know more about me!</p>
+        </div>
+        <div id="about" class="content">
+            <div class="section-title">About Me</div>
+            <p>Hi! I’m Sandipan Saha, a passionate Computer Science student with a love for solving real-world problems through technology. Currently in my first year at IEM Newtown, I’m exploring fields like AI, web development, and data science. When I'm not coding or learning new frameworks, you’ll find me diving into football, Bollywood, and also in photography and editing.</p>
+        </div>
+        <div id="education" class="content">
+            <div class="section-title">Educational Background</div>
+            <p>I'm currently a first-year student at IEM Newtown, pursuing a degree in B.Tech. My coursework has provided me with a strong foundation in [mention key areas like algorithms, data structures, machine learning, etc.]. Beyond academics, I actively engage in hands-on projects and internships to apply what I learn in real-world scenarios. With each semester, I’m building both technical and problem-solving skills that I’m excited to bring into future professional opportunities.</p>
+        </div>
+        <div id="experience" class="content">
+            <div class="section-title">Experience</div>
+            <p>1. School Project: Personal Portfolio Website
+                
+                
+                Created a personal portfolio website using HTML, CSS, and basic JavaScript to display my projects and skills.
+                
+                Learned foundational web development principles, including structuring web pages and applying design.
+                
+                Gained project management skills, organizing tasks and setting goals to complete the project independently.
+                
+                
+                
+                2. Event Planning Team Member
+                
+                
+                Collaborated with peers to organize and execute a successful school event, gaining experience in teamwork and logistics.
+                
+                Managed communication between team members, helping ensure all tasks were completed on time.
+                
+                Enhanced problem-solving skills by addressing and resolving challenges during the event.
+                
+                
+                
+                3. Presentation Skills through Group Projects
+                
+                
+                Developed strong presentation abilities through group assignments, delivering content effectively to classmates and teachers.
+                
+                Practiced creating visually engaging slides and organizing information in a clear, accessible way.
+                
+                Improved public speaking confidence, learning to convey ideas clearly and handle questions from an audience.</p>
+        </div>
+        <div id="publications" class="content">
+            <div class="section-title">Publications</div>
+            <p></p>
+        </div>
+        <div id="awards" class="content">
+            <div class="section-title">Awards & Achievements</div>
+            <p>Consistently recognized for outstanding performance in exams, maintaining a top rank in computer, science and maths at school.
+
+                Secured awards in school-level and regional Olympiads, including  Math Olympiad, Science Quiz, demonstrating a strong aptitude for problem-solving and analytical skills.
+                
+                
+                Sports Recognition
+                
+                Represented Loyola School in Sport football, basketball, contributing to the team’s success and winning, inter-school tournaments or regional championships.
+                
+                Awarded for consistent sportsmanship and dedication to team sports.
+                
+                
+                Extracurricular Excellence
+                
+                Honored in various school-level competitions like, debate, science fairs, art competitions, showcasing versatility and creativity.
+                
+                Participated in volunteer initiatives and leadership activities that emphasize teamwork and community involvement.</p>
+        </div>
+        <div id="projects" class="content">
+            <div class="section-title">Projects</div>
+            <p>1. Personal Portfolio Website
+                Developed a portfolio website using HTML, CSS, and JavaScript to showcase my work, skills, and experience. Through this project, I learned essential web development practices, from designing a user-friendly layout to coding responsive pages. This experience helped me understand the basics of front-end development and sparked my interest in building functional websites.
+                
+                
+                2. Data Analysis for Science Fair Project
+                Conducted a data analysis project for the school science fair, using tools like Excel and basic Python to explore patterns and present insights. This project enhanced my analytical skills, allowing me to organize and interpret data, and improved my ability to communicate complex information clearly to a non-technical audience.
+                
+                
+                3. Team Event Planning and Management
+                Collaborated on planning a school event, managing logistics, and coordinating tasks with team members. This project strengthened my organizational and teamwork skills, as we successfully brought together a memorable event for students and teachers.</p>
+        </div>
+        <div id="membership" class="content">
+            <div class="section-title">Membership</div>
+            <p>1. Coding Club
+                Member since 2024
+                As a member of the Coding Club, I collaborate with peers on projects, participate in coding challenges, and attend workshops to strengthen my skills in programming and problem-solving. This community has helped me stay updated on the latest trends in tech and develop my technical abilities.
+                
+                
+                2. School Football Team
+                Member since 2024
+                Being part of the school football team has taught me the value of teamwork, resilience, and strategic thinking. Representing our school in various tournaments, I learned to work with others toward a common goal and developed discipline and leadership skills both on and off the field.
+                
+                
+                3. Debate Society
+                Member since 2024
+                As a member of the Debate Society, I’ve improved my public speaking and critical thinking skills, regularly engaging in debates on diverse topics. This experience has boosted my confidence in expressing ideas clearly and has taught me to analyze and approach issues from different perspectives.
+                
+                
+                4. Science Club, Math Society
+                Member since 2024
+                My involvement in the Science/Math Society has deepened my understanding of core concepts through discussions, projects, and competitions. Being part of this group has also encouraged me to explore new interests within science and mathematics.</p>
+        </div>
+        <div id="research" class="content">
+            <div class="section-title">Research Thrust Area</div>
+            <p>My primary research interests lie at the intersection of technology, data science, and real-world problem-solving. Driven by curiosity and a commitment to innovation, I am focused on exploring and contributing to the following key areas:
+
+                1. Artificial Intelligence and Machine Learning
+                I am fascinated by the potential of AI and machine learning to transform industries and solve complex challenges. My interests include understanding algorithms, predictive modeling, and their applications in fields like medical diagnostics and natural language processing. Through research, I aim to uncover insights that push the boundaries of what AI can achieve responsibly and ethically.
+                
+                
+                2. Data Science and Analytics
+                Data is at the core of modern decision-making, and I am passionate about using data science to derive actionable insights. I am particularly interested in projects that involve big data analysis, data visualization, and predictive analytics to support informed, data-driven solutions.
+                
+                
+                3. Web and Software Development
+                My experience in web development has sparked an interest in creating user-centric, scalable applications. This thrust area includes exploring frameworks, improving user experience, and investigating efficient software solutions for a variety of applications, from personal projects to large-scale deployments.
+                
+                
+                4. Human-Computer Interaction (HCI)
+                I am intrigued by the design and usability aspects of technology, focusing on how people interact with digital systems. My aim is to create intuitive, accessible, and efficient interfaces that improve user experience and make technology more inclusive.</p>
+        </div>
+        <div id="events" class="content">
+            <div class="section-title">Events</div>
+            <p>1. Talk on the Importance of Artificial Intelligence in Medical Science
+
+                Date: October 5, 2024
+                
+                Organizer: IEM New Town, UEM Kolkata
+                
+                Speaker: Prof. Niladri Chatterjee, IIT Delhi
+                
+                Description: Co-coordinated an insightful talk discussing the transformative role of AI in the medical field, focusing on its applications and future potential.
+                
+                
+                2. College Cultural Fest 2023
+                
+                Date: September 15-16, 2024
+                
+                Role: Volunteer
+                
+                Description: Assisted in organizing various cultural activities, including dance performances, music competitions, and art exhibitions, fostering student creativity and engagement.</p>
+        </div>
+        <div id="presentations" class="content">
+            <div class="section-title">Presentations</div>
+            <p>Information Poster/Paper Presentation: "5G: The Next Generation of Connectivity"
+
+                Event: College Annual Tech Symposium
+                
+                Date: 20 September, 2024
+                
+                Role: Presenter
+                
+                
+                Overview: Presented an information poster on "5G: The Next Generation of Connectivity" at the College Annual Tech Symposium. The presentation highlighted the transformative impact of 5G technology on various sectors, including telecommunications, healthcare, and smart cities.
+                
+                Key Topics Covered:
+                
+                Introduction to 5G Technology: Explained the fundamental principles of 5G, including its enhanced speed, lower latency, and higher capacity compared to previous generations.
+                
+                Applications of 5G: Discussed the potential applications of 5G in real-world scenarios, such as autonomous vehicles, augmented reality, and IoT (Internet of Things) devices.
+                
+                Challenges and Considerations: Addressed the challenges in implementing 5G infrastructure, including security concerns, investment requirements, and regulatory issues.
+                
+                Future Trends: Explored future trends and innovations that 5G technology may bring, emphasizing its role in shaping the digital landscape.
+                
+                
+                Impact: The presentation aimed to educate peers about the significance of 5G technology and inspire interest in further research and development in the field of telecommunications.</p>
+        </div>
+        <div id="courses" class="content">
+            <div class="section-title">Courses Completed</div>
+            <p>Online Courses Completed
+
+                1. Introduction to Computer Science and Programming Using Python
+                
+                Platform: edX
+                
+                Duration: 10 weeks
+                
+                Description: This course provided a comprehensive introduction to computer science using Python. It covered foundational programming concepts, problem-solving techniques, and algorithm design.
+                
+                
+                2. Web Development Bootcamp
+                
+                Platform: Udemy
+                
+                Duration: 8 weeks
+                
+                Description: A hands-on course focused on HTML, CSS, and JavaScript. It included project-based learning to develop responsive websites and user interfaces.
+                
+                
+                3. Data Science Essentials
+                
+                Platform: Coursera
+                
+                Duration: 6 weeks
+                
+                Description: This course covered key concepts in data science, including data visualization, statistical analysis, and machine learning basics using Python and R.
+                
+                
+                4. Digital Marketing Specialization
+                
+                Platform: Coursera
+                
+                Duration: 5 months
+                
+                Description: An in-depth exploration of digital marketing strategies, including SEO, social media marketing, and email marketing. The course involved real-world case studies and projects.
+                
+                
+                5. Introduction to Artificial Intelligence
+                
+                Platform: FutureLearn
+                
+                Duration: 4 weeks
+                
+                Description: An introductory course covering the basics of AI, its applications, and ethical considerations. The course provided a solid foundation for understanding AI technologies.</p>
+        </div>
+        <div id="contact" class="content">
+            <div class="section-title">Contact Me</div>
+            <p>e-mail: sandipans639@gmail.com</p>
+            <p>LinkedIn: linkedin.com/in/sandipan_saha</p>
+            <p>GitHub: github.com/sandipan_saha</p>
+            <p>Twitter: twitter.com/sandipan_saha</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Sandipan Saha. All Rights Reserved.
+    </footer>
+
+    <script>
+        function changeSection(section) {
+            const container = document.getElementById('section-container');
+            const sections = document.querySelectorAll('.content');
+            
+            sections.forEach(sec => {
+                sec.style.display = 'none';
+            });
+
+            const selectedSection = document.getElementById(section);
+            selectedSection.style.display = 'block';
+
+            container.className = `container ${section}`;
+        }
+
+        // Load "Home" section first on page load
+        window.onload = function() {
+            changeSection('home');
+        }
+    </script>
+</body>
+</html>
